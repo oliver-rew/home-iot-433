@@ -83,7 +83,14 @@ def rfm_send(rfm, data):
     rfm69.idle()
 
 # ppm message components
+
+# the original signal had a sync bit followed by approx 5
+# zero bit times. The RFM69 seems to always insert a single
+# high bit at the beginning of a transmission, so just pad
+# 5 bit times at the beginning to make the sync header
 sync = bitarray('0000000000')
+
+# ppm binary representations in approx bit times
 one = bitarray('100000')
 zero = bitarray('10')
 
