@@ -1,0 +1,13 @@
+[Unit]
+Description=home-iot-433
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=python3 /home/pi/home-iot-433/home-iot.py
+Environment=BLYNK_AUTH=blynk_auth_token
+
+[Install]
+WantedBy=multi-user.target
