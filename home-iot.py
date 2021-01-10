@@ -27,8 +27,10 @@ blynk = blynklib.Blynk(BLYNK_AUTH)
 def write_virtual_pin_handler(pin, value):
     pin_val = value[0]
     if pin_val == "1":
+        print("Turn on V1")
         on(dev1)
     elif pin_val == "0":
+        print("Turn off V1")
         off(dev1)
 
 # attach device 2 to pin V2
@@ -36,9 +38,22 @@ def write_virtual_pin_handler(pin, value):
 def write_virtual_pin_handler(pin, value):
     pin_val = value[0]
     if pin_val == "1":
+        print("Turn on V2")
         on(dev2)
     elif pin_val == "0":
+        print("Turn off V2")
         off(dev2)
+
+# attach device 3 to pin V3
+@blynk.handle_event('write V3')
+def write_virtual_pin_handler(pin, value):
+    pin_val = value[0]
+    if pin_val == "1":
+        print("Turn on V3")
+        on(dev3)
+    elif pin_val == "0":
+        print("Turn off V3")
+        off(dev3)
 
 # Configure Packet Radio
 CS = DigitalInOut(board.CE1)
