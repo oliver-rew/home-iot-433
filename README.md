@@ -10,10 +10,10 @@ Blynk:
 https://blynk.io/
 
 ## Disclaimer
-First of all, I had to tailor the 433MHz control payload my exact, so 
-mileage may vary with other outlets. It is not terribly hard to reverse
-engineer the protocol. I used an RTL-SDR and the awesome `rtl_433` tool 
-to figure out the protocol.
+First of all, I had to tailor the 433MHz control payload for my exact 
+outlets, so mileage may vary with other outlets. It is not terribly 
+hard to reverse engineer the protocol. I used an RTL-SDR and the 
+awesome `rtl_433` tool to figure out the protocol.
 
 ## Installation
 - enable SPI with `sudo raspi-config` and reboot
